@@ -88,7 +88,7 @@ Visyeiiさん、ありがとうございました。
 
 Other usage is Japanese, please visit my blog.
 
-My Blog:  https://www.mgo-tec.com
+My Blog:  https://www.mgo-tec.com  
 (ver1.39) https://www.mgo-tec.com/blog-entry-softap-esp8266-easywebsocket139.html  
 (ver1.35) https://www.mgo-tec.com/blog-entry-wroom-websocket-messageboard-05.html  
 (ver1.3) https://www.mgo-tec.com/blog-entry-easywebsocket-beta13.html

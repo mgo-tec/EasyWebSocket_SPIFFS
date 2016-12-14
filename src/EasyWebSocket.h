@@ -1,6 +1,6 @@
 /*
-  EasyWebsocket.h - EasyWebSocket_SPIFFS for ESP-WROOM-02 ( esp8266 )
-  Beta version 1.45
+  EasyWebSocket.cpp - WebSocket for ESP-WROOM-02 ( esp8266 ) (SPIFFS only)
+  Beta version 1.48
 
 Copyright (c) 2016 Mgo-tec
 This library improvement collaborator is Mr.Visyeii.
@@ -41,9 +41,11 @@ Released under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
 #include "ESP8266WiFi.h"
 #include "Hash.h"
 #include "FS.h"
-enum HTTPClientStatus { HC_NONE, HC_WAIT_READ, HC_WAIT_CLOSE };
+
+enum HTTPClientStatus1 { HC_NONE1, HC_WAIT_READ1, HC_WAIT_CLOSE1 };
 #define HTTP_MAX_DATA_WAIT 1000 //ms to wait for the client to send the request
 #define HTTP_MAX_CLOSE_WAIT 2000 //ms to wait for the client to close the connection
+
 class EasyWebSocket
 {
 public:
@@ -52,7 +54,8 @@ public:
   void AP_Connect(const char* ssid, const char* password);
   void SoftAP_setup(const char* ssid, const char* password);
   void handleClient();
-  void EWS_HandShake(String _res_html1, String _res_html2, String _res_html3, String _res_html4, String _res_html5, String _res_html6, String _res_html7);
+  void EWS_HandShake(String res_html1, String res_html2, String res_html3, String res_html4, String res_html5, String res_html6, String res_html7);
+  void EWS_Dev_AutoLIP_HandShake_str(const char* HTML_head_file1, IPAddress res_LIP, const char* HTML_head_file2, String res_html1, String res_html2, String res_html3, String res_html4, String res_html5, String res_html6, String res_html7);
   void EWS_HTTP_Responce();
   void Hash_Key(String h_req_key, char* h_resp_key);
   void EWS_ESP8266_Str_SEND(String str, String id);
@@ -78,11 +81,15 @@ public:
   String EWS_WebSocket_Reconnection_Button2(String name, String BG_col, uint16_t width, uint16_t height, String font_col, uint8_t font_size);
 	String EWS_BrowserSendRate();
   String EWS_Status_Text(uint8_t font_size, String color);
-	String EWS_Status_Text2(String name, String b_color, uint8_t font_size, String f_color);
+  String EWS_Status_Text2(String name, String b_color, uint8_t font_size, String f_color);
   String EWS_Canvas_Slider_T(String slider_id, uint16_t width, uint16_t height, String frame_col, String fill_col);
   String EWS_TextBox_Send(String id, String txt, String BT_txt);
   String EWS_Web_Get(char* host, String target_ip, uint8_t char_tag, String Final_tag, String Begin_tag, String End_tag, String Paragraph);
-  
+  void EWS_Web_Get2(char* host, String target_ip, uint8_t char_tag, String Final_tag, String Begin_tag, String End_tag, String Paragraph, char RetChar[][500], uint8_t* RetCharCount);
+	void Favicon_Response(String str, uint8_t ws, uint8_t ini_htm, uint8_t up_f);
+  String Color_Picker(uint16_t top_px, uint16_t left_px, String default_col, String ID);
+
+	
 private:
   boolean _Ini_html_on = false;
   boolean _WS_on = false;

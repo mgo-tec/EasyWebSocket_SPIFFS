@@ -1,4 +1,4 @@
-# EasyWebSocket_SPIFFS BETA ver 1.45
+# EasyWebSocket_SPIFFS BETA ver 1.48
 Simple library for WebSocket communication with ESP-WROOM-02(ESP8266) and smartphone browser.  
 This requires the Arduino core for ESP8266 WiFi chip library.  
 https://github.com/esp8266/arduino  
@@ -6,7 +6,17 @@ This use SPIFFS file system.
 
 My Blog: https://www.mgo-tec.com
 # Change log:
-
+  
+(1.48)  
+*Added a color picker (for Android, Windows 10) library that selects the RGB color code for determining colors in the browser.  
+*Added a library that automatically obtains the local IP address and an HTML header division file accompanying it.  
+*Updated the HTML header file and increased the information size of WebSocket communication status display.  
+*Other minor modifications  
+  
+-NEW class-  
+Color_Picker  
+EWS_Dev_AutoLIP_HandShake_str  
+  
 (1.45)  
 A watchdog timer of ESP8266 to create a grace period to operate, has been added here and there yield ().  
 As a result, I think the operation is stable.  
@@ -45,6 +55,16 @@ Mr. Visyeii, Thank you very much.
 *Updated the HTML header file "spiffs_01.txt" be read by SPIFFS file system.
 
 【更新履歴】(Japanese)   
+(1.48)  
+・ブラウザで色を決定するためのRGBカラーコードを選択するカラーピッカー(Android, Windows10用)ライブラリを追加しました。 
+・ローカルIPアドレスを自動取得するライブラリと、それに伴うHTMLヘッダ分割ファイルを追加しました。  
+・HTMLヘッダファイルを更新し、WebSocket通信Status表示の情報量を増やしました。  
+・その他、軽微な修正  
+  
+-NEW class-  
+Color_Picker  
+EWS_Dev_AutoLIP_HandShake_str  
+  
 (1.45)  
 ESP8266のウォッチドッグタイマを作動させる猶予時間を作るために、所々 yield() を追加しました。  
 それにより、多少動作が安定したと思います。

@@ -1,6 +1,6 @@
 /*
 EasyWebSocket_SPIFFS for ESP-WROOM-02 ( ESP8266 ) Sample Sketch
-for Beta version 1.45
+for Beta version 1.48
 ---> https://www.mgo-tec.com
 Please rewrite their own the ssid and password.
 Please rewrite their own local IP address of "/data/spiffs_01.txt" in the sketch folder.

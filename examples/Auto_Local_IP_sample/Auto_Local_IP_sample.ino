@@ -10,8 +10,8 @@ Use the SPIFFS file system uploader, please upload the HTMhead1.txt & HTMhead2.t
 #include <ESP8266WiFi.h>
 #include <Hash.h>
 
-const char* ssid = "ohcom-5GAC";
-const char* password = "DGjaoif5he5f4OOSRtflgka657888888AAQQOOOelslkjffslkjHHa55g";
+const char* ssid = "xxxx";
+const char* password = "xxxx";
 
 const char* HTM_head_file1 = "/HTMhead1.txt"; //HTMLヘッダファイル1
 const char* HTM_head_file2 = "/HTMhead2.txt"; //HTMLヘッダファイル2
